@@ -1,0 +1,10 @@
+DOCKER
+
+docker-compose build 
+
+
+flake8: 
+    docker-compose run --rm app sh -c "flake8"
+
+testing:
+    docker-compose run --rm app sh -c "python manage.py test"
