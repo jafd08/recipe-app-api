@@ -1,9 +1,10 @@
 DOCKER
 
-docker-compose build 
+docker-compose build
 
-
-flake8: 
+run anything:
+     docker-compose run --rm app sh -c "python manage.py __"
+flake8:
     docker-compose run --rm app sh -c "flake8"
 
 testing:
@@ -12,3 +13,7 @@ testing:
 join commands:
     docker-compose run --rm app sh -c "python manage.py test && flake8"
     docker-compose run --rm app sh -c "python manage.py wait_for_db && flake8"
+
+
+user = admin@example.com
+        pw A....3$
